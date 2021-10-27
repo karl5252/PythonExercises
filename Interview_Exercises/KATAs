@@ -36,10 +36,15 @@ public class Troll {
                       
     }
 }
-SOLUTION (PYTHON):
+SOLUTION (PYTHON) 1:
 def disemvowel(string_):
     vowels =  ['A','a','E','e','I','i','O','o', 'U', 'u']
     for letter in vowels:
          string_ = string_.replace(letter, '')
+    return string_
+    
+ SOLUTION (PYTHON) 2:
+ def disemvowel(string_):
+    string_ = string_.translate(None, "aAeEiIoOuU")
     return string_
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------

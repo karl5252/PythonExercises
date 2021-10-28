@@ -172,3 +172,13 @@ def printer_error(s):
         if l in errors_list:
             errors += 1
     return "{}/{}".format(errors, len(s))
+    
+SOLUTION 2 (python):
+def printer_error(s):
+    good_colors = "abcdefghijklm"
+    counter = 0
+    for i in s:
+        if i not in good_colors:
+            counter += 1
+    return str(counter) + "/" + str(len(s))
+    -----------------------------------------------------------------------------------------------------------------------------------------------------

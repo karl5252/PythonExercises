@@ -182,3 +182,22 @@ def printer_error(s):
             counter += 1
     return str(counter) + "/" + str(len(s))
     -----------------------------------------------------------------------------------------------------------------------------------------------------
+     by myjinxin2015
+     
+     Move all exclamation marks to the end of the sentence
+Solution 1 (python):
+TESTS:
+#add also random length words
+#not all words have to end with exclamation mark! Right?
+tests = [
+    ["Hi!", "Hi!"],
+    ["Hi! Hi!", "Hi Hi!!"],
+    ["Hi! Hi! Hi!" , "Hi Hi Hi!!!"],
+    ["Hi! !Hi Hi!", "Hi Hi Hi!!!"],
+    ["Hi! Hi!! Hi!" , "Hi Hi Hi!!!!"],
+]
+
+for input, expected in tests:
+    test.assert_equals(remove(input), expected)
+    
+   

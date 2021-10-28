@@ -81,3 +81,30 @@ Note:
 
 Don't forget to convert the percent parameter as a percentage in the body of your function: if the parameter percent is 2 you have to convert it to 0.02.
 
+SOLUTION TODO
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+by acr
+Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
+
+Write a function which takes a list of strings and returns each line prepended by the correct number.
+
+The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+
+TESTS:
+import org.junit.Test;
+import java.util.Arrays;
+import static org.junit.Assert.assertEquals;
+
+public class LineNumberingTest {
+    @Test
+    public void basicTests() {
+        assertEquals(Arrays.asList(), LineNumbering.number(Arrays.asList()));
+        assertEquals(Arrays.asList("1: a", "2: b", "3: c"), LineNumbering.number(Arrays.asList("a", "b", "c")));
+        assertEquals(Arrays.asList("1: ", "2: ", "3: ", "4: ", "5: "), LineNumbering.number(Arrays.asList("", "", "", "", "")));
+    }
+}
+SOLUTION 1:
+SOLUTION 2:
+-------------------------------------------------------------------------------------------------------------------------------------------------------------

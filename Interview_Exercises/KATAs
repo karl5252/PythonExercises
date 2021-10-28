@@ -105,6 +105,29 @@ public class LineNumberingTest {
         assertEquals(Arrays.asList("1: ", "2: ", "3: ", "4: ", "5: "), LineNumbering.number(Arrays.asList("", "", "", "", "")));
     }
 }
-SOLUTION 1:
+SOLUTION 1 (python):
+def number(lines):
+    #your code here
+    list = []
+    for count, elem in enumerate(lines):
+        list.append("{}: {}".format(count + 1, elem))
+    return list
+
+SOLUTION 2 (python):
+    return [f"{i + 1}: {j}" for i, j in enumerate(j)]
+---
+TESTS:
+    
+    import codewars_test as test
+from solution import number
+
+@test.describe("Fixed Tests")
+def fixed_tests():
+    @test.it('Basic Test Cases')
+    def basic_test_cases():
+        test.assert_equals(number([]), [])
+        test.assert_equals(number(["a", "b", "c"]), ["1: a", "2: b", "3: c"])
+        
+        
 SOLUTION 2:
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
